@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;900&family=Open+Sans:wght@300;400;700&display=swap');
+
+
+@font-face {
+    font-family: 'silverline';
+    src: url('../../fonts/silverline.woff2') format('woff2'),
+        url('../../fonts/silverline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hanley';
+    src: url('../../fonts/hanley_pro_slim.woff2') format('woff2'),
+        url('../../fonts/hanley_pro_slim.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    background-color: #1D1D1D;
+    color: white;
+}
+
+.balise {
+    color: #585858;
+    font-family: 'silverline';
+    font-size: 1.875rem;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width:768px) {
+    .balise {
+        font-size: 1.3rem;
+    }
+}
+
+/* I. Menu */
+
+body .navbar {
+    background: rgba(14, 14, 14, 0.5);
+    padding-right: 3%;
+    position: sticky;
+    top: 0;
+}
+
+.navbar .container-fluid .collapse .navbar-nav .nav-item a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    padding-right: 30px;
+}
+
+/* II.Contenu */
+
+main {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+    /* border: blue solid; */
+}
+
+main p {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 1.1rem;
+    padding-left: 15px;
+}
+
+/* Présentation */
+
+.presentation {
+    /* border: red solid; */
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3vh;
+    margin-top: 5vh;
+}
+
+.presentation p{
+    text-indent: 40px;
+}
+
+.presentation b{
+    font-weight: 600;
+}
+
+.titre {
+    /* border: red solid; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: max-content;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 5vh;
+}
+
+.titre h1,
+.titre h2 {
+    font-family: 'Be Vietnam Pro';
+    font-weight: 800;
+    -webkit-text-stroke: 1px #D26CD5;
+    color: transparent;
+    font-size: 3.125rem;
+    margin: 0px 10px 0px 10px;
+}
+
+.titre h2 {
+    font-size: 2.9rem;
+}
+
+@media screen and (max-width:768px) {
+    .presentation {
+        width: 100%;
+    }
+
+    .titre h1,
+    .titre h2 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    main p {
+        font-size: 0.8rem;
+    }
+}
+
+hr {
+    border: #D26CD5 1px solid;
+    opacity: 100%;
+    width: 50%;
+    margin: auto;
+    margin-top: 8vh;
+    margin-bottom: 7vh;
+}
+
+/* Savoirs & Outils */
+
+.outils {
+    /* border: pink solid; */
+    margin-top: 2vh;
+}
+
+.outils .titre{
+    margin-bottom: 8vh;
+}
+
+.outils-carte {
+    /* border: green solid; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.outils-carte h3 {
+    font-family: 'hanley';
+    color: #D26CD5;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ligne-haut {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.ligne-bas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ligne-haut>div,
+.ligne-bas>div {
+    background: #181818;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+    width: 20vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-bottom: 2vw;
+    border-top: #D26CD5 solid 2px;
+}
+
+.logiciels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.logiciels div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30%;
+}
+
+.logiciels img {
+    width: 40%;
+}
+
+.logiciels p {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    margin: 0;
+    margin-top: 2%;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width:994px) {
+    .ligne-haut {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .ligne-bas {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .outils-carte {
+        flex-direction: column-reverse;
+    }
+
+    .ligne-haut>div,
+    .ligne-bas>div {
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logiciels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .outils-carte h3 {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .logiciels p {
+        font-size: 0.7rem;
+    }
+}
+
+/* Parcours */
+
+/* .parcours {
+    border: red solid;
+} */
+
+/* .titre {
+    border: green solid;
+} */
+
+/* Formations */
+
+.sous-titre {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: max-content;
+    margin-top: 30px;
+    margin-bottom: 5vh;
+    position: relative;
+}
+
+.sous-titre h3 {
+    font-family: 'Be Vietnam Pro';
+    font-weight: 800;
+    -webkit-text-stroke: 1px #D26CD5;
+    color: transparent;
+    font-size: 2.8rem;
+    margin: 0px 10px 0px 10px;
+}
+
+.formations{
+    /* border: yellow solid; */
+    /* width: 90%; */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fond_blanc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: white solid 2px;
+    padding: 8px;
+    margin-bottom: 6%;
+    margin-right: 50px;
+}
+
+.fond_violet {
+    background: #D26CD5;
+}
+
+.texte_parcours {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    position: relative;
+    background-color: #1D1D1D;
+    margin: 8px;
+    padding: 3% 5%;
+    width: 28vw;
+}
+
+.texte_parcours h2 {
+    font-family: 'hanley';
+    font-size: 1.5rem;
+}
+
+.texte_parcours h3,
+.texte_parcours h4 {
+    font-family: 'hanley';
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.texte_parcours h4{
+    text-align: right;
+    margin: 0;
+}
+
+.texte_parcours p {
+    font-family: 'Open Sans';
+    font-size: 0.78rem;
+    font-weight: 400;
+    padding: 0;
+}
+
+@media screen and (max-width: 994px) {
+    .texte_parcours {
+        width: 65vw;
+    }
+
+    .fond_blanc{
+        margin-right: 0;
+    }
+
+    .formations>div{
+        margin: auto;
+    }
+
+    .sous-titre h3{
+        font-size:1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .texte_parcours h2 {
+        font-family: 'hanley';
+        font-size: 1rem;
+    }
+    
+    .texte_parcours h3,
+    .texte_parcours h4 {
+        font-family: 'hanley';
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    
+    .texte_parcours p {
+        font-size: 0.6rem;
+    }
+}
+
+/* Footer */
+
+body .bg-dark {
+    background-color: rgba(14, 14, 14, 0.5) !important;
+}
+
+footer .container {
+    text-align: center !important;
+}
+
+@media screen and (max-width: 768px) {
+    footer .container {
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;900&family=Open+Sans:wght@300;400;700&display=swap');
+
+
+@font-face {
+    font-family: 'silverline';
+    src: url('../../fonts/silverline.woff2') format('woff2'),
+        url('../../fonts/silverline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hanley';
+    src: url('../../fonts/hanley_pro_slim.woff2') format('woff2'),
+        url('../../fonts/hanley_pro_slim.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    background-color: #1D1D1D;
+    color: white;
+}
+
+.balise {
+    color: #585858;
+    font-family: 'silverline';
+    font-size: 1.875rem;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width:768px) {
+    .balise {
+        font-size: 1.3rem;
+    }
+}
+
+/* I. Menu */
+
+body .navbar {
+    background: rgba(14, 14, 14, 0.5);
+    padding-right: 3%;
+    position: sticky;
+    top: 0;
+}
+
+.navbar .container-fluid .collapse .navbar-nav .nav-item a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    padding-right: 30px;
+}
+
+/* II.Contenu */
+
+main {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+/* Titre */
+
+.titre {
+    /* border: red solid; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: max-content;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 5vh;
+}
+
+.titre h1 {
+    font-family: 'Be Vietnam Pro';
+    font-weight: 800;
+    -webkit-text-stroke: 1px #F4D03E;
+    color: transparent;
+    font-size: 3.125rem;
+    margin: 0px 10px 0px 10px;
+}
+
+main p {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding-left: 15px;
+}
+
+@media screen and (max-width:768px) {
+    .titre h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    main p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Projets */
+
+.btn {
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+.btn:hover {
+    color: #F4D03E;
+}
+
+.active {
+    color: #F4D03E;
+}
+
+.projets {
+    margin-top: 2vh;
+    padding: 1%;
+}
+
+.projets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+.projets div {
+    height: 45vh;
+}
+
+@media screen and (max-width:994px) {
+    .projets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projets div {
+        height: 20vh;
+    }
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    filter: saturate(0%);
+    object-fit: cover;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-item:hover img {
+    filter: saturate(100%);
+}
+
+.titre_carte {
+    top: calc(50% - 20px);
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    transition: all .5s ease;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    opacity: 0;
+}
+
+.portfolio-item:hover .titre_carte {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titre_carte h4 {
+    font-family: 'hanley';
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.53);
+    margin: 0;
+}
+
+.categorie {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: white;
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.53);
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.32);
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.portfolio-item .overlay {
+    transition: all .5s ease;
+    transform: translateY(100%);
+}
+
+.portfolio-item:hover .overlay {
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    .titre_carte h4 {
+        font-size: 1.5rem;
+    }
+
+    .categorie {
+        font-size: 0.8rem;
+        ;
+    }
+
+    .portfolio-item .titre_carte {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .portfolio-item .overlay {
+        transform: translateY(0);
+    }
+
+    #filtres a{
+        font-size: 0.78rem;
+    }
+}
+
+/* Footer */
+
+body .bg-dark {
+    background-color: rgba(14, 14, 14, 0.5) !important;
+}
+
+footer .container {
+    text-align: center !important;
+}
+
+@media screen and (max-width: 768px) {
+    footer .container {
+        font-size: 0.7rem;
+    }
+}

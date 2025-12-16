@@ -1,0 +1,25 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;900&family=Open+Sans:wght@300;400;700&display=swap');
+</style>
+font-family: 'Be Vietnam Pro', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+
+@font-face {
+    font-family: 'silverline';
+    src: url('silverline.woff2') format('woff2'),
+         url('silverline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+font-family: 'silverline', sans-serif;
+
+
+@font-face {
+    font-family: 'hanley';
+    src: url('hanley_pro_slim.woff2') format('woff2'),
+         url('hanley_pro_slim.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+font-family: 'hanley', sans-serif;
